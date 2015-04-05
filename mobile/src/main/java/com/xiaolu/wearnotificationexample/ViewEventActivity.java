@@ -4,35 +4,21 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 
 
-public class MainActivity extends ActionBarActivity {
+public class ViewEventActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Button btnFireNotif = (Button) findViewById(R.id.btnFireNotif);
-        btnFireNotif.setOnClickListener(fireNotifCallback);
+        setContentView(R.layout.activity_view_event);
     }
-
-    private OnClickListener fireNotifCallback = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            NotifHelper.buildDemoNotification(getBaseContext());
-        }
-    };
-
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_view_event, menu);
         return true;
     }
 
